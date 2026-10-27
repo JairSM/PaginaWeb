@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#060b15">
+  <meta name="description" content="Crónicas de la Galaxia: una enciclopedia fan de Star Wars sobre historia, personajes, la Fuerza y los grandes conflictos.">
+  <title>Crónicas de la Galaxia | Enciclopedia Star Wars</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&family=Spectral:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="starfield" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Crónicas de la Galaxia, inicio">
+      <span class="brand-mark">✦</span><span class="brand-text">CRÓNICAS <small>DE LA GALAXIA</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-label="Abrir navegación">☰</button>
+    <nav id="mainNav" aria-label="Navegación principal">
+      <a class="nav-link active" href="#inicio">Inicio</a>
+      <a class="nav-link" href="#historia">Historia</a>
+      <a class="nav-link" href="#personajes">Personajes</a>
+      <a class="nav-link" href="#fuerza">La Fuerza</a>
+      <a class="nav-link" href="#galaxia">La galaxia</a>
+      <a class="nav-link" href="#archivo">Archivo</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar ambiente visual" title="Cambiar ambiente visual">☾</button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-nebula"></div>
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> ARCHIVOS HISTÓRICOS</p>
+        <h1>UNA GALAXIA.<br><em>INFINITAS</em><br>HISTORIAS.</h1>
+        <p class="hero-lead">Mucho antes de la Rebelión, antes del Imperio y antes de que un joven granjero mirara hacia dos soles, la galaxia ya guardaba miles de años de guerras, descubrimientos y leyendas.</p>
+        <div class="hero-actions">
+          <a class="button button-gold" href="#historia">Explorar la historia <span>↗</span></a>
+          <a class="button button-outline" href="#personajes">Conocer a sus protagonistas</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>01</strong><span>Historia galáctica</span></div>
+          <i></i>
+          <div><strong>02</strong><span>Personajes y legados</span></div>
+          <i></i>
+          <div><strong>03</strong><span>Canon y Legends</span></div>
+        </div>
+      </div>
+      <div class="hero-planet planet-a"></div>
+      <div class="hero-planet planet-b"></div>
+      <div class="hero-caption">ARCHIVO 001 <span>•</span> LOS DESTINOS DE LA GALAXIA</div>
+    </section>
+
+    <section class="intro-band">
+      <div class="intro-symbol">✧</div>
+      <p><strong>Star Wars no es solo una guerra entre estrellas.</strong> Es una historia sobre el poder, el miedo, la esperanza, la familia y las decisiones que pueden cambiar el destino de civilizaciones enteras.</p>
+    </section>
+
+    <section class="section history-section" id="historia">
+      <div class="section-heading">
+        <div><p class="kicker">EL GRAN RELATO</p><h2>La historia <em>galáctica</em></h2></div>
+        <p class="section-desc">Un recorrido por las eras que definieron la galaxia. Selecciona un periodo para conocer sus acontecimientos y consecuencias.</p>
+      </div>
+      <div class="continuity-control">
+        <span class="control-label">CONTINUIDAD DEL ARCHIVO</span>
+        <div class="segmented" role="group" aria-label="Seleccionar continuidad">
+          <button class="continuity-button active" data-continuity="canon">Canon</button>
+          <button class="continuity-button" data-continuity="legends">Legends</button>
+          <button class="continuity-button" data-continuity="both">Comparar ambas</button>
+        </div>
+      </div>
+      <div class="dating-note"><span class="dating-symbol">⌖</span><p><strong>Cómo leer las fechas:</strong> en muchas cronologías de Star Wars se usa ABY (después de la batalla de Yavin) y BBY (antes de esa batalla). No todas las historias antiguas tienen una fecha canónica definitiva.</p></div>
+      <div class="timeline-layout">
+        <div class="era-list" id="eraList" aria-label="Eras históricas"></div>
+        <article class="era-detail" id="eraDetail" aria-live="polite"></article>
+      </div>
+      <p class="canon-note"><span>ⓘ</span> <span><strong>Nota sobre continuidad:</strong> el canon es la continuidad oficial principal actual. <em>Legends</em> reúne historias del antiguo universo expandido que ya no forman parte del canon principal. Ambas tienen relatos y personajes muy queridos, pero no deben mezclarse como si fueran una sola cronología.</span></p>
+    </section>
+
+    <section class="section character-section" id="personajes">
+      <div class="section-heading">
+        <div><p class="kicker">VIDAS QUE CAMBIARON LA HISTORIA</p><h2>Personajes <em>clave</em></h2></div>
+        <p class="section-desc">No son solo héroes y villanos: son personas cuyas elecciones alteraron el curso de la galaxia.</p>
+      </div>
+      <div class="character-tools">
+        <label class="search-box"><span>⌕</span><input id="characterSearch" type="search" placeholder="Buscar nombre, origen o afiliación..." aria-label="Buscar personajes"></label>
+        <div class="filter-chips" id="characterFilters">
+          <button class="filter-chip active" data-filter="Todos">Todos</button>
+          <button class="filter-chip" data-filter="Jedi">Jedi</button>
+          <button class="filter-chip" data-filter="Sith">Sith</button>
+          <button class="filter-chip" data-filter="Rebelión">Rebelión</button>
+          <button class="filter-chip" data-filter="Nueva generación">Nueva generación</button>
+          <button class="filter-chip" data-filter="Favoritos">★ Favoritos <span id="favoriteCount">0</span></button>
+        </div>
+      </div>
+      <div class="character-grid" id="characterGrid" aria-live="polite"></div>
+      <p class="empty-state hidden" id="characterEmpty">No encontramos personajes con esos filtros. Prueba otra búsqueda.</p>
+      <p class="favorite-hint">Consejo: marca personajes con la estrella para crear tu propio archivo personal. Tus favoritos se guardan en este navegador.</p>
+    </section>
+
+    <section class="force-section" id="fuerza">
+      <div class="force-art">
+        <div class="force-ring ring-one"></div><div class="force-ring ring-two"></div>
+        <div class="force-core">✦</div>
+        <span class="force-label label-light">LADO LUMINOSO</span>
+        <span class="force-label label-dark">LADO OSCURO</span>
+      </div>
+      <div class="force-copy">
+        <p class="kicker">ENERGÍA QUE LO CONECTA TODO</p>
+        <h2>La Fuerza:<br><em>equilibrio y elección</em></h2>
+        <p>La Fuerza es un campo de energía creado por los seres vivos que conecta la galaxia. Algunas personas son especialmente sensibles a ella y pueden aprender a percibirla y utilizarla.</p>
+        <div class="force-tabs" role="group" aria-label="Explorar conceptos de la Fuerza">
+          <button class="force-tab active" data-force="light">Lado luminoso</button>
+          <button class="force-tab" data-force="dark">Lado oscuro</button>
+          <button class="force-tab" data-force="jedi">La Orden Jedi</button>
+          <button class="force-tab" data-force="sith">Los Sith</button>
+        </div>
+        <div class="force-explanation" id="forceExplanation"></div>
+        <p class="subtle-note">La Fuerza y sus tradiciones se representan de distintas maneras a lo largo de las historias. No todas las culturas sensibles a ella pertenecen a los Jedi o a los Sith.</p>
+      </div>
+    </section>
+
+    <section class="section conflict-section" id="conflictos">
+      <div class="section-heading">
+        <div><p class="kicker">CAUSAS, DECISIONES, CONSECUENCIAS</p><h2>Conflictos que <em>marcaron eras</em></h2></div>
+        <p class="section-desc">Las grandes guerras no surgieron de la nada. Aquí vemos qué las provocó y qué cambió después.</p>
+      </div>
+      <div class="conflict-grid">
+        <article class="conflict-card">
+          <span class="conflict-index">01 / POLÍTICA</span><div class="conflict-icon gold-icon">⌘</div>
+          <h3>La caída de la República</h3><p>Una crisis política, el miedo y la manipulación permiten que el Canciller Palpatine concentre el poder y transforme la República en Imperio.</p>
+          <div class="cause-line"><strong>Consecuencia</strong><span>El fin de la República y la persecución de los Jedi.</span></div>
+        </article>
+        <article class="conflict-card">
+          <span class="conflict-index">02 / GUERRA</span><div class="conflict-icon blue-icon">✧</div>
+          <h3>Las Guerras Clon</h3><p>La República y los separatistas se enfrentan en una guerra cuyo diseño político esconde una maniobra mucho mayor.</p>
+          <div class="cause-line"><strong>Consecuencia</strong><span>La militarización de la República y el ascenso de Palpatine.</span></div>
+        </article>
+        <article class="conflict-card">
+          <span class="conflict-index">03 / RESISTENCIA</span><div class="conflict-icon red-icon">⚔</div>
+          <h3>La Rebelión contra el Imperio</h3><p>Distintos grupos se unen para desafiar el dominio imperial y luchar por recuperar la libertad de los sistemas.</p>
+          <div class="cause-line"><strong>Consecuencia</strong><span>La derrota del Imperio en la trilogía original y el comienzo de una nueva etapa.</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="galaxy-section" id="galaxia">
+      <div class="galaxy-overlay"></div>
+      <div class="galaxy-content">
+        <p class="kicker">UN MAPA LLENO DE HISTORIAS</p>
+        <h2>La galaxia es mucho<br>más que un escenario.</h2>
+        <p>Los planetas crean culturas, las culturas construyen alianzas y las alianzas pueden cambiar el destino de toda una civilización.</p>
+        <div class="planet-grid">
+          <article class="planet-card"><span class="planet-dot tatooine"></span><div><h3>Tatooine</h3><p>Mundo desértico, contrabandistas y el inicio del viaje de Luke.</p><small>DESIERTO · BORDE EXTERIOR</small></div></article>
+          <article class="planet-card"><span class="planet-dot coruscant"></span><div><h3>Coruscant</h3><p>Centro político de la República y sede del poder galáctico durante distintas eras.</p><small>ECÚMENÓPOLIS · NÚCLEO</small></div></article>
+          <article class="planet-card"><span class="planet-dot naboo"></span><div><h3>Naboo</h3><p>Mundo de gran belleza, hogar de Padmé Amidala y escenario de una crisis decisiva.</p><small>VERDE · LAGOS Y CIUDADES</small></div></article>
+          <article class="planet-card"><span class="planet-dot mustafar"></span><div><h3>Mustafar</h3><p>Planeta volcánico ligado a uno de los momentos más trágicos de la saga.</p><small>VOLCÁNICO · LAVA</small></div></article>
+          <article class="planet-card"><span class="planet-dot kashyyyk"></span><div><h3>Kashyyyk</h3><p>Mundo boscoso de los wookiees, marcado por las Guerras Clon y la Orden 66.</p><small>BOSQUES · WOOKIEES</small></div></article>
+          <article class="planet-card"><span class="planet-dot mandalore"></span><div><h3>Mandalore</h3><p>Centro de una cultura guerrera con una historia compleja y vínculos con los Jedi.</p><small>MANDALORIANOS · TRADICIÓN</small></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section archive-section" id="archivo">
+      <div class="section-heading">
+        <div><p class="kicker">CONSULTA RÁPIDA</p><h2>Archivo <em>galáctico</em></h2></div>
+        <p class="section-desc">Conceptos esenciales para orientarte entre órdenes, especies, tecnología y política.</p>
+      </div>
+      <label class="search-box archive-search"><span>⌕</span><input id="glossarySearch" type="search" placeholder="Buscar un término..." aria-label="Buscar términos del glosario"></label>
+      <div class="glossary-grid" id="glossaryGrid"></div>
+    </section>
+
+    <section class="sources-section">
+      <div class="sources-symbol">⌑</div>
+      <div><p class="kicker">CRITERIO DEL ARCHIVO</p><h2>Una galaxia, varias continuidades.</h2><p></p>
+        <div class="source-links">
+          <a href="https://www.starwars.com/" target="_blank" rel="noopener noreferrer">StarWars.com ↗</a>
+          <a href="https://www.starwars.com/databank" target="_blank" rel="noopener noreferrer">Databank oficial ↗</a>
+          <a href="https://starwars.fandom.com/wiki/Main_Page" target="_blank" rel="noopener noreferrer">Wookieepedia, referencia de fans ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="#inicio"><span class="brand-mark">✦</span><span class="brand-text">CRÓNICAS <small>DE LA GALAXIA</small></span></a>
+    <p>Explora historias, personajes y civilizaciones de una galaxia muy, muy lejana.</p>
+    <a href="#inicio" class="back-top">Volver al inicio ↑</a>
+    <small></small>
+  </footer>
+
+  <dialog id="characterDialog" class="detail-dialog">
+    <button class="dialog-close" id="dialogClose" aria-label="Cerrar ventana">×</button>
+    <div id="characterDialogContent"></div>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
